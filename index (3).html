@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Meta charset dan viewport untuk tampilan responsif -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kopi Langit – Coffeeshop Yogyakarta</title>
+
+  <!-- Link stylesheet CSS eksternal -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts: Cormorant Garamond (display elegan) + DM Sans (body bersih) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       CURSOR KUSTOM
+  ============================================================ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <header class="navbar" id="navbar">
+    <a href="#hero" class="logo">
+      <!-- Logo teks dengan ikon bintang dekoratif -->
+      <span class="logo-star">✦</span> Kopi Langit
+    </a>
+    <nav class="nav-links">
+      <a href="#tentang">Tentang</a>
+      <a href="#menu">Menu</a>
+      <a href="#suasana">Suasana</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <!-- Tombol reservasi di navbar -->
+    <button class="btn-nav" onclick="showReservasi()">Reservasi Meja</button>
+  </header>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <!-- Gambar 1: Background hero coffeeshop -->
+    <img
+      class="hero-bg"
+      src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1600&q=85"
+      alt="Suasana dalam coffeeshop Kopi Langit Yogyakarta"
+    />
+    <!-- Overlay gradien berlapis untuk efek sinematik -->
+    <div class="hero-overlay"></div>
+
+    <!-- Teks besar dekoratif di latar belakang -->
+    <p class="hero-bg-text" aria-hidden="true">JOGJA</p>
+
+    <div class="hero-content">
+      <!-- Label kecil di atas heading -->
+      <span class="hero-label">✦ Sejak 2018 · Yogyakarta ✦</span>
+
+      <!-- Heading H1 utama -->
+      <h1 class="hero-title">
+        Tempat di Mana<br/>
+        <em>Kopi Bertemu</em><br/>
+        Jiwa
+      </h1>
+
+      <!-- Paragraf deskripsi singkat hero -->
+      <p class="hero-desc">
+        Nikmati setiap tegukan kopi pilihan terbaik dari dataran tinggi Nusantara,
+        dihidangkan dalam ruang yang hangat dan penuh cerita di jantung Kota Jogja.
+      </p>
+
+      <div class="hero-cta">
+        <!-- Tombol utama dengan alert -->
+        <button class="btn-primary" onclick="showWelcome()">Jelajahi Menu</button>
+        <!-- Tombol sekunder -->
+        <a href="#tentang" class="btn-ghost">Kisah Kami ↓</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator bawah -->
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STRIP MARQUEE (teks berjalan)
+  ============================================================ -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Single Origin ✦ Pour Over ✦ Cold Brew ✦ Espresso ✦ Latte Art ✦ Kopi Tubruk ✦ Robusta Merapi ✦ Arabica Flores ✦</span>
+      <span>Single Origin ✦ Pour Over ✦ Cold Brew ✦ Espresso ✦ Latte Art ✦ Kopi Tubruk ✦ Robusta Merapi ✦ Arabica Flores ✦</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SECTION TENTANG
+  ============================================================ -->
+  <section class="tentang" id="tentang">
+    <div class="container">
+
+      <!-- Nomor section dekoratif -->
+      <span class="section-num">01</span>
+
+      <div class="tentang-grid">
+        <!-- Kolom gambar dengan frame overlap -->
+        <div class="tentang-visual">
+          <!-- Gambar 2: Barista membuat kopi -->
+          <img
+            class="img-main"
+            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=85"
+            alt="Barista Kopi Langit menyeduh pour over"
+          />
+          <!-- Card float statistik -->
+          <div class="float-card">
+            <strong>4.9</strong>
+            <span>★★★★★</span>
+            <small>1.200+ ulasan Google</small>
+          </div>
+        </div>
+
+        <!-- Kolom teks -->
+        <div class="tentang-text">
+          <p class="eyebrow">Tentang Kami</p>
+
+          <!-- Heading H2 section tentang -->
+          <h2>Lebih dari Sekadar<br/><em>Secangkir Kopi</em></h2>
+
+          <!-- Paragraf 1 -->
+          <p class="body-text">
+            Kopi Langit lahir dari mimpi sederhana: menciptakan ruang di mana waktu terasa
+            melambat. Berlokasi di Jalan Prawirotaman — kampung seniman Yogyakarta —
+            kami hadir sebagai tempat bertemunya penikmat kopi, seniman lokal, dan
+            siapapun yang butuh jeda dari hiruk-pikuk kota.
+          </p>
+
+          <!-- Paragraf 2 -->
+          <p class="body-text">
+            Biji kopi kami disourcing langsung dari petani mitra di lereng Gunung Merapi,
+            Flores, dan Toraja. Setiap batch di-roast sendiri di workshop kami untuk
+            memastikan kesegaran dan karakter rasa yang konsisten — dari nangkring bareng
+            teman hingga meeting pagi yang produktif.
+          </p>
+
+          <!-- Tiga angka statistik -->
+          <div class="stats-row">
+            <div class="stat">
+              <strong>6+</strong><span>Tahun Berdiri</span>
+            </div>
+            <div class="stat">
+              <strong>12</strong><span>Varietas Kopi</span>
+            </div>
+            <div class="stat">
+              <strong>500+</strong><span>Tamu per Hari</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION MENU
+  ============================================================ -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+
+      <span class="section-num light">02</span>
+
+      <!-- Header section menu -->
+      <div class="menu-header">
+        <div>
+          <p class="eyebrow light">Menu Pilihan</p>
+          <!-- Heading H2 menu -->
+          <h2 class="light">Signature<br/><em>Drinks</em></h2>
+        </div>
+        <p class="menu-intro">
+          Setiap minuman dirancang oleh kepala barista kami<br/>
+          dengan cermat untuk pengalaman rasa terbaik.
+        </p>
+      </div>
+
+      <!-- Grid kartu menu -->
+      <div class="menu-grid">
+
+        <!-- Kartu 1: Espresso -->
+        <div class="menu-card" data-cat="espresso">
+          <!-- Gambar 3 -->
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=500&q=80"
+              alt="Espresso Kopi Langit"
+            />
+            <span class="card-badge">Bestseller</span>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>Langit Espresso</h3>
+              <span class="price">Rp 28K</span>
+            </div>
+            <p>Robusta Merapi single origin, body bold dengan aftertaste cokelat gelap.</p>
+          </div>
+        </div>
+
+        <!-- Kartu 2: Signature Latte -->
+        <div class="menu-card featured" data-cat="latte">
+          <!-- Gambar 4 -->
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80"
+              alt="Signature Latte Kopi Langit"
+            />
+            <span class="card-badge gold">Signature</span>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>Prawirotaman Latte</h3>
+              <span class="price">Rp 42K</span>
+            </div>
+            <p>Espresso + susu segar + gula aren Jawa. Latte art bunga lotus dari barista kami.</p>
+          </div>
+        </div>
+
+        <!-- Kartu 3: Cold Brew -->
+        <div class="menu-card" data-cat="cold">
+          <!-- Gambar 5 -->
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&q=80"
+              alt="Cold Brew Kopi Langit"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>Merapi Cold Brew</h3>
+              <span class="price">Rp 38K</span>
+            </div>
+            <p>Diseduh dingin 18 jam, menghasilkan rasa smooth dengan sentuhan buah tropis.</p>
+          </div>
+        </div>
+
+        <!-- Kartu 4: Pour Over -->
+        <div class="menu-card" data-cat="manual">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80"
+              alt="Pour Over Kopi Langit"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>Flores Pour Over</h3>
+              <span class="price">Rp 45K</span>
+            </div>
+            <p>Arabica Flores Bajawa V60, aroma floral dengan keasaman cerah dan finish panjang.</p>
+          </div>
+        </div>
+
+        <!-- Kartu 5: Matcha -->
+        <div class="menu-card" data-cat="non-coffee">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?w=500&q=80"
+              alt="Matcha Latte"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>Matcha Sereh</h3>
+              <span class="price">Rp 36K</span>
+            </div>
+            <p>Matcha premium + infusi sereh lokal + susu oat. Buat yang ingin feel zen di Jogja.</p>
+          </div>
+        </div>
+
+        <!-- Kartu 6: Kopi Tubruk -->
+        <div class="menu-card" data-cat="traditional">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&q=80"
+              alt="Kopi Tubruk Tradisional"
+            />
+            <span class="card-badge">Warisan</span>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3>Tubruk Nenek Moyang</h3>
+              <span class="price">Rp 22K</span>
+            </div>
+            <p>Kopi tubruk otentik Jawa. Kopi kasar, air panas, gula batu. Sesederhana itu, sesempurna itu.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tombol lihat menu lengkap -->
+      <div class="menu-footer">
+        <button class="btn-outline-light" onclick="showMenuLengkap()">Lihat Semua Menu →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION SUASANA (GALLERY)
+  ============================================================ -->
+  <section class="suasana" id="suasana">
+    <div class="container">
+      <span class="section-num">03</span>
+      <p class="eyebrow">Galeri</p>
+      <!-- Heading H2 galeri -->
+      <h2>Temukan Sudut<br/><em>Favoritmu</em></h2>
+    </div>
+
+    <!-- Grid foto masonry -->
+    <div class="gallery-grid">
+      <div class="g-item tall">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80" alt="Sudut meja jendela Kopi Langit" />
+        <div class="g-overlay"><span>Indoor Lounge</span></div>
+      </div>
+      <div class="g-item">
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80" alt="Meja outdoor Kopi Langit" />
+        <div class="g-overlay"><span>Outdoor Garden</span></div>
+      </div>
+      <div class="g-item">
+        <img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=600&q=80" alt="Bar kopi Kopi Langit" />
+        <div class="g-overlay"><span>Brew Bar</span></div>
+      </div>
+      <div class="g-item wide">
+        <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=900&q=80" alt="Suasana pagi Kopi Langit" />
+        <div class="g-overlay"><span>Morning Vibes</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION QUOTE / PULL QUOTE
+  ============================================================ -->
+  <section class="pullquote">
+    <div class="container">
+      <!-- Tanda kutip dekoratif besar -->
+      <span class="quote-mark" aria-hidden="true">"</span>
+      <blockquote>
+        Kopi yang baik tidak terburu-buru —<br/>
+        <em>begitu pun waktu di sini.</em>
+      </blockquote>
+      <cite>— Aldi Nugroho, Head Barista Kopi Langit</cite>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER / KONTAK
+  ============================================================ -->
+  <footer class="footer" id="kontak">
+    <div class="container">
+      <span class="section-num light">04</span>
+
+      <div class="footer-grid">
+        <!-- Kolom brand -->
+        <div class="footer-brand-col">
+          <p class="footer-logo">✦ Kopi Langit</p>
+          <p class="footer-tagline">Coffeeshop · Roastery · Art Space<br/>Yogyakarta, Indonesia</p>
+          <!-- Heading H2 di footer -->
+          <h2 class="footer-cta-text">Temui kami<br/>hari ini.</h2>
+          <button class="btn-primary" onclick="showReservasi()">Reservasi Sekarang</button>
+        </div>
+
+        <!-- Kolom info -->
+        <div class="footer-info-col">
+          <div class="footer-info-block">
+            <p class="info-label">Lokasi</p>
+            <p>Jl. Prawirotaman II No. 14<br/>Mergangsan, Yogyakarta 55153</p>
+          </div>
+          <div class="footer-info-block">
+            <p class="info-label">Jam Buka</p>
+            <p>Senin – Jumat: 07.00 – 22.00<br/>Sabtu – Minggu: 07.00 – 23.00</p>
+          </div>
+          <div class="footer-info-block">
+            <p class="info-label">Kontak</p>
+            <p>📞 +62 812-3456-7890<br/>✉ hello@kopilangit.id</p>
+          </div>
+          <div class="footer-info-block">
+            <p class="info-label">Ikuti Kami</p>
+            <p>@kopilangit.jogja</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Garis bawah footer -->
+      <div class="footer-bottom">
+        <p>© 2025 Kopi Langit. All rights reserved.</p>
+        <p>Made with ☕ in Yogyakarta</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    // ── Navbar: tambah class saat scroll ──
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ── Custom cursor ──
+    const cursor = document.getElementById('cursor');
+    const follower = document.getElementById('cursorFollower');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top  = e.clientY + 'px';
+      setTimeout(() => {
+        follower.style.left = e.clientX + 'px';
+        follower.style.top  = e.clientY + 'px';
+      }, 80);
+    });
+
+    // Cursor membesar saat hover link/tombol
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => follower.classList.add('hovered'));
+      el.addEventListener('mouseleave', () => follower.classList.remove('hovered'));
+    });
+
+    // ── Alert: tombol "Jelajahi Menu" di hero ──
+    function showWelcome() {
+      alert("☕ Selamat datang di Kopi Langit!\n\nScrool ke bawah untuk melihat menu signature kami.\nAtau langsung kunjungi kami di Jl. Prawirotaman II No. 14, Yogyakarta.\n\nSalam hangat dari seluruh tim barista kami! ✦");
+    }
+
+    // ── Alert: tombol "Reservasi Meja" ──
+    function showReservasi() {
+      alert("📅 Reservasi Meja Kopi Langit\n\nUntuk reservasi, silakan hubungi kami:\n📞 +62 812-3456-7890\n✉ hello@kopilangit.id\n\nAtau kunjungi langsung:\nJl. Prawirotaman II No. 14, Yogyakarta\n\nKami buka setiap hari mulai pukul 07.00 WIB. ☕");
+    }
+
+    // ── Alert: tombol "Lihat Semua Menu" ──
+    function showMenuLengkap() {
+      alert("📋 Menu Lengkap Kopi Langit\n\n☕ KOPI PANAS — Rp 22K–45K\n🧊 KOPI DINGIN — Rp 32K–48K\n🍵 NON-COFFEE — Rp 28K–40K\n🥐 PASTRY & SNACK — Rp 18K–55K\n\nLihat menu digital lengkap kami di Instagram @kopilangit.jogja");
+    }
+
+    // ── Animasi muncul saat scroll (Intersection Observer) ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    // Amati semua elemen yang punya class 'reveal'
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
